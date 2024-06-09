@@ -20,14 +20,14 @@ function getValue(e) {
   attempts--;
 
   if (attempts === 0 && guess !== secretCode) {
-    output.innerHTML = `BOOOOOOOMMM... YOU BLEW IT! THE CORRECT CODE WAS "${secretCode}"`;
+    output.innerHTML += `BOOOOOOOMMM... YOU BLEW IT! THE CORRECT CODE WAS "${secretCode}"`;
     input.disabled = true;
   } else if (guess > secretCode) {
-    output.innerHTML = 'EARLIER';
+    output.innerHTML += 'EARLIER<br/>';
   } else if (guess < secretCode) {
-    output.innerHTML = 'LATER';
+    output.innerHTML += 'LATER<br/>';
   } else {
-    output.innerHTML = 'TICK...FZZZZ...CLICK...YOU DID IT!';
+    output.innerHTML += 'TICK...FZZZZ...CLICK...YOU DID IT!';
     input.disabled = true;
   }
 
